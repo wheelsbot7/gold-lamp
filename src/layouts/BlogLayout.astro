@@ -17,6 +17,7 @@ interface Props {
   url: string;
   updatedDate: Date | undefined;
   readingTime: string;
+  color: string;
 }
 
 const {
@@ -28,6 +29,7 @@ const {
   url,
   updatedDate,
   readingTime,
+  color,
 } = Astro.props;
 
 const ogImage = {
@@ -35,7 +37,8 @@ const ogImage = {
   alt: title,
 };
 
-const githubUrl = "https://github.com/wheelsbot7/gold-lamp/tree/main/src/content";
+const githubUrl =
+  "https://github.com/wheelsbot7/gold-lamp/tree/main/src/content";
 
 const fullPubDate = pubDate.toLocaleDateString("en", {
   dateStyle: "full",
@@ -109,12 +112,15 @@ const fullUpdatedDate = updatedDate?.toLocaleDateString("en", {
       </article>
     )
   }
-  <article
-    class="prose max-w-none dark:prose-invert dark:prose-code:text-zinc-300 dark:prose-a:text-zinc-300 prose-a:text-zinc-600 prose-a:underline prose-a:decoration-zinc-500 hover:prose-a:decoration-zinc-300 prose-a:underline-offset-4 dark:prose-headings:text-zinc-100 prose-img:rounded-lg"
-  >
-    <slot />
-    <hr />
-  </article>
+  <!--CSS class is passed in 2 sections, first with the div and then with the article. For some reason, variable classes and tailwind classes don't mix, so as far as I know, this is the cleanest way to do it. -->
+  <div class={color}>
+    <article
+      class="prose max-w-none dark:prose-invert dark:prose-code:text-zinc-300 dark:prose-a:text-zinc-300 prose-a:text-zinc-600 prose-a:underline prose-a:decoration-zinc-500 hover:prose-a:decoration-zinc-300 prose-a:underline-offset-4 dark:prose-headings:text-zinc-100 prose-img:rounded-lg"
+    >
+      <slot />
+      <hr />
+    </article>
+  </div>
   <ul class="mt-4 flex max-sm:flex-col sm:justify-between gap-2 sm:gap-1">
     <li title="Copy the link of this article">
       <button
