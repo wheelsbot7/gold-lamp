@@ -5,8 +5,6 @@ import { author, defaultMeta, navigation } from "@data/constants";
 import "@fontsource-variable/inter";
 import Callout from "@components/MDX/Callout.astro";
 
-const twitter = "exylods"; // Twitter username, even though it's privated.
-
 interface Props {
   title?: string;
   description?: string;
@@ -48,13 +46,6 @@ const canonicalURL = new URL(Astro.url).href;
     <meta property="og:site_name" content={author} />
     <meta property="og:image:alt" content={ogImage.alt} />
     <meta property="og:locale" content="en_US" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta name="twitter:site" content={twitter} />
-    <meta name="twitter:creator" content={twitter} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={ogImageURL} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <meta name="author" content={author} />
@@ -68,11 +59,11 @@ const canonicalURL = new URL(Astro.url).href;
     }
   </head>
   <body
-    class="dark:bg-zinc-950 bg-zinc-50 antialiased selection:bg-zinc-700 selection:text-zinc-100 dark:selection:bg-zinc-500 dark:selection:text-white pt-10 2xl:text-lg"
+    class="dark:bg-stone-950 bg-stone-50 antialiased selection:bg-stone-700 selection:text-stone-100 dark:selection:bg-stone-500 dark:selection:text-white pt-10 2xl:text-lg"
   >
     <a
       href="#main-content"
-      class="absolute opacity-0 focus:opacity-100 border-transparent border-y border-r text-xs lg:text-sm px-4 py-1.5 lg:py-2 top-1 lg:top-[41px] transition-transform duration-300 rounded-r-full bg-zinc-300 dark:bg-zinc-800 font-medium text-zinc-800 dark:text-zinc-200 -translate-x-full focus:translate-x-0 focus:ring"
+      class="absolute opacity-0 focus:opacity-100 border-transparent border-y border-r text-xs lg:text-sm px-4 py-1.5 lg:py-2 top-1 lg:top-[41px] transition-transform duration-300 rounded-r-full bg-stone-300 dark:bg-stone-800 font-medium text-stone-800 dark:text-stone-200 -translate-x-full focus:translate-x-0 focus:ring"
       >Skip to main content</a
     >
     <nav
@@ -93,7 +84,7 @@ const canonicalURL = new URL(Astro.url).href;
       </ul>
       <button
         id="dark-mode-toggle"
-        class="dark:text-zinc-100 text-zinc-900 dark:hover:text-zinc-300 hover:text-zinc-600 my-2.5"
+        class="dark:text-stone-100 text-stone-900 dark:hover:text-stone-300 hover:text-stone-600 my-2.5"
         aria-label="Toggle theme mode"
       >
         <Icon name="moon" class="w-6 h-6 sun-icon" />
@@ -101,7 +92,7 @@ const canonicalURL = new URL(Astro.url).href;
       </button>
     </nav>
     <main
-      class="px-6 lg:px-2 mx-auto dark:text-zinc-400 text-zinc-600"
+      class="px-6 lg:px-2 mx-auto dark:text-stone-400 text-stone-600"
       id="main-content"
       class:list={{
         "max-w-4xl": wide,
@@ -118,7 +109,7 @@ const canonicalURL = new URL(Astro.url).href;
     </main>
     <footer class="mt-12 pb-12">
       <div
-        class="mx-auto max-w-4xl px-6 lg:px-2 text-center text-xs lg:text-sm dark:text-zinc-400 text-zinc-600"
+        class="mx-auto max-w-4xl px-6 lg:px-2 text-center text-xs lg:text-sm dark:text-stone-400 text-stone-600"
       >
         <p>
           &copy; {new Date().getFullYear()}
@@ -177,11 +168,11 @@ const canonicalURL = new URL(Astro.url).href;
     }
 
     body::-webkit-scrollbar-thumb {
-      @apply bg-zinc-400;
+      @apply bg-stone-400;
     }
 
     .dark body::-webkit-scrollbar-thumb {
-      @apply bg-zinc-800;
+      @apply bg-stone-800;
     }
   </style>
 </html>

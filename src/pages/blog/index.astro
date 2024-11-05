@@ -1,15 +1,15 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import { getCollection } from "astro:content";
 import Blog from "@components/Blog.astro";
+import Header from "@components/Header.astro";
 import SearchBar from "@components/SearchBar.astro";
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const title = "Blog - AstroZinc";
+const title = "Blog - Astrostone";
 const description =
   "This is a collection of all the blog posts that I have written. I write about web development, programming, and other things that I find interesting.";
 ---
@@ -22,7 +22,7 @@ const description =
     </p>
   </section>
   <SearchBar />
-  <h2 class="mt-12 text-2xl font-semibold dark:text-zinc-100 text-zinc-900">
+  <h2 class="mt-12 text-2xl font-semibold dark:text-stone-100 text-stone-900">
     Posts
   </h2>
   <ul class="mt-6 grid grid-cols-1">
@@ -37,7 +37,7 @@ const description =
     </p>
     <a
       href="/rss.xml"
-      class="text-zinc-900 bg-zinc-200/80 hover:bg-zinc-300 font-medium rounded-lg text-base px-5 py-2.5 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800"
+      class="text-stone-900 bg-stone-200/80 hover:bg-stone-300 font-medium rounded-lg text-base px-5 py-2.5 dark:bg-stone-900 dark:text-white dark:hover:bg-stone-800"
       >RSS Feed</a
     >
   </section>

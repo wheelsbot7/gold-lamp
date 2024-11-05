@@ -1,10 +1,10 @@
-import satori from "satori";
-import { html } from "satori-html";
-import { Resvg } from "@resvg/resvg-js";
 import InterRegular from "@fontsource/inter/files/inter-latin-400-normal.woff";
 import InterBold from "@fontsource/inter/files/inter-latin-700-normal.woff";
-import { getCollection } from "astro:content";
+import { Resvg } from "@resvg/resvg-js";
 import type { APIContext } from "astro";
+import { getCollection } from "astro:content";
+import satori from "satori";
+import { html } from "satori-html";
 
 const dimensions = {
   width: 1200,
@@ -22,7 +22,7 @@ export async function GET(context: APIContext) {
     dateStyle: "full",
   });
 
-  const markup = html`<div tw="bg-zinc-900 flex flex-col w-full h-full">
+  const markup = html`<div tw="bg-stone-900 flex flex-col w-full h-full">
     <svg
       tw="absolute right-18 [transform:translatex(-50%)]"
       width="495"
@@ -54,7 +54,7 @@ export async function GET(context: APIContext) {
     </svg>
 
     <div tw="flex flex-col items-center w-full h-4/5 p-10 justify-center mt-9">
-      <div tw="text-zinc-400 text-2xl mb-6">${date}</div>
+      <div tw="text-stone-400 text-2xl mb-6">${date}</div>
       <div
         tw="flex items-center justify-center text-6xl w-full font-bold leading-snug tracking-tight text-white"
       >
@@ -66,8 +66,8 @@ export async function GET(context: APIContext) {
           tw="w-15 h-15 rounded-full"
         />
         <div tw="flex flex-col ml-4 text-2xl">
-          <span tw="text-zinc-400">Lance Ross</span>
-          <span tw="text-zinc-400">@exylods</span>
+          <span tw="text-stone-400">Lance Ross</span>
+          <span tw="text-stone-400">@exylods</span>
         </div>
       </div>
     </div>

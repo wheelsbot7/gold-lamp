@@ -29,8 +29,8 @@ module.exports = {
               content: '""',
             },
             ":not(pre) > code": {
-              backgroundColor: theme("colors.zinc.200"),
-              borderColor: theme("colors.zinc.300"),
+              backgroundColor: theme("colors.stone.200"),
+              borderColor: theme("colors.stone.300"),
               padding: "0.250rem 0.4rem",
               borderRadius: "0.250rem",
               fontWeight: "400",
@@ -40,8 +40,8 @@ module.exports = {
         invert: {
           css: {
             ":not(pre) > code": {
-              backgroundColor: theme("colors.zinc.900"),
-              borderColor: theme("colors.zinc.800"),
+              backgroundColor: theme("colors.stone.900"),
+              borderColor: theme("colors.stone.800"),
             },
           },
         },

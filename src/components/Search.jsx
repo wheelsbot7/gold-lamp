@@ -30,7 +30,7 @@ function Search({ searchList }) {
     <div>
       <label
         htmlFor="search"
-        className="mb-2 text-sm font-medium text-zinc-900 sr-only dark:text-white"
+        className="mb-2 text-sm font-medium text-stone-900 sr-only dark:text-white"
       >
         Search
       </label>
@@ -40,7 +40,7 @@ function Search({ searchList }) {
           id="search"
           value={query}
           onChange={handleOnSearch}
-          className="block w-full p-4 text-sm text-zinc-900 dark:text-zinc-100 rounded-lg bg-zinc-200/60 dark:bg-zinc-900 focus:outline-none shadow-sm"
+          className="block w-full p-4 text-sm text-stone-900 dark:text-stone-100 rounded-lg bg-stone-200/60 dark:bg-stone-900 focus:outline-none shadow-sm"
           placeholder="Search for blog posts..."
         />
       </div>
@@ -56,7 +56,7 @@ function Search({ searchList }) {
             class="
             
             lg:flex-row lg:items-baseline lg:justify-between
-            border-b border-spacing-y-2 border-zinc-300 dark:border-zinc-800 pb-4
+            border-b border-spacing-y-2 border-stone-300 dark:border-stone-800 pb-4
           "
           >
             <a
@@ -64,7 +64,7 @@ function Search({ searchList }) {
               class="relative group flex flex-col sm:flex-row gap-0.5"
             >
               <div class="flex flex-col">
-                <p class="mb-1 font-semibold dark:text-zinc-300 text-zinc-950 group-hover:text-zinc-400 dark:group-hover:text-green transition-colors">
+                <p class="mb-1 font-semibold dark:text-stone-300 text-stone-950 group-hover:text-stone-400 dark:group-hover:text-green transition-colors">
                   {data.data.title}
                 </p>
 

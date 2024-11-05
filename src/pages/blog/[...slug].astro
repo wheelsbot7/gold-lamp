@@ -25,7 +25,6 @@ const { Content, remarkPluginFrontmatter } = await post.render();
   url={post.slug}
   updatedDate={frontmatter.updatedDate}
   readingTime={remarkPluginFrontmatter.minutesRead}
-  color={frontmatter.color}
 >
   <Content />
 </BlogLayout>
