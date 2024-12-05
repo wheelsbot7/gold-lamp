@@ -11,10 +11,10 @@
     "lint": "eslint . --max-warnings 0 --report-unused-disable-directives"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^3.1.9",
-    "@astrojs/rss": "^4.0.9",
+    "@astrojs/mdx": "4.0.1",
+    "@astrojs/rss": "4.0.10",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^5.1.2",
+    "@astrojs/tailwind": "5.1.3",
     "@fontsource-variable/inter": "^5.1.0",
     "@fontsource/inter": "^5.1.0",
     "@resvg/resvg-js": "^2.6.2",
@@ -22,7 +22,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
-    "astro": "^4.16.16",
+    "astro": "5.0.3",
     "astro-compress": "2.2.28",
     "astro-expressive-code": "^0.29.4",
     "astro-icon": "^1.1.4",
@@ -38,7 +38,7 @@
     "satori-html": "^0.3.2"
   },
   "dependencies": {
-    "@astrojs/react": "^3.6.3",
+    "@astrojs/react": "^3.6.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "fuse.js": "^7.0.0",
